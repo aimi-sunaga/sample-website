@@ -1,0 +1,53 @@
+/* ========================= */
+/* ニュースセクションのスタイル */
+/* ========================= */
+
+/* ヘッダーのマージン */
+.news-header {
+    margin-left: 20px; /* 左側のマージンを追加 */
+}
+
+/* トピックごとの色分け */
+.topic-recruitment {
+    color: blue; /* 採用情報 */
+}
+
+.topic-news {
+    color: red; /* ニュース */
+}
+
+.topic-service {
+    color: green; /* サービス */
+}
+
+/* ========================= */
+/* リストのスタイル */
+/* ========================= */
+
+ul {
+    list-style-type: none; /* リストのスタイルを消す */
+    padding: 0; /* パディングをリセット */
+    display: flex; /* フレックスボックスを使用 */
+    flex-direction: column; /* 縦に並べる */
+}
+
+li {
+    display: block; /* フレックスボックスを解除してブロック要素にする */
+    padding: 10px 0; /* 上下のパディングを追加 */
+}
+
+/* styles.css */
+.content {
+    font-size: 1.2em; /* 内容のフォントサイズを大きくする */
+}
+
+.date {
+    font-size: 1.5em; /* 日付のフォントサイズを大きくする */
+    border-bottom: 2px solid #000; /* ボーダーラインを追加（太さ2px、色は黒） */
+    padding-bottom: 5px; /* ボーダーとテキストの間にスペースを追加 */
+    margin-bottom: 10px; /* ボーダーの下にマージンを追加（必要に応じて調整） */
+}
+
+.topic {
+    font-size: 0.9em; /* トピックのフォントサイズを小さくする */
+}

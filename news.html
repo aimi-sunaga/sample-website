@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="design/news.css">
+    <script type="module" src="app.js"></script>
+    <script src="news.js" defer></script>
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <main>
+        <section id="news">
+            <h2>最新のNEWS</h2>
+            <ul id="news-summary-list">
+                <!-- JavaScriptで日付を追加 -->
+            </ul>
+        </section>
+
+        <section id="news-list">
+            <h2>NEWS一覧</h2>
+            <ul id="news-detail-list">
+                
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        // ページが読み込まれたときに#news-listにスクロール
+        if (window.location.hash === '#news-list') {
+            document.getElementById('news-list').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+    <footer>
+        <p>所在地: 東京都〇〇区〇〇町1-2-3</p>
+        <p>TEL: 03-1234-5678</p>
+        <p>受付時間: 9:00 - 17:00</p>
+        <a href="contact.html">お問い合わせフォームはこちら</a>
+    </footer>
+
+    <form id="add-news-form">
+        <input type="text" id="news-title" placeholder="タイトル" required>
+        <textarea id="news-content" placeholder="内容" required></textarea>
+        <input type="date" id="news-date" required>
+        <select id="news-topic" required>
+            <option value="採用情報">採用情報</option>
+            <option value="news">ニュース</option>
+            <option value="service">サービス</option>
+        </select>
+        <button type="submit">ニュースを追加</button>
+    </form>
+
+    <script>
+    document.getElementById('add-news-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // フォームのデフォルトの送信を防ぐ
+        const title = document.getElementById('news-title').value;
+        const content = document.getElementById('news-content').value;
+        const date = document.getElementById('news-date').value;
+        const topic = document.getElementById('news-topic').value;
+
+        addNews(title, content, date, topic); // ニュースを追加する関数を呼び出す
+    });
+    </script>
+</body>
+</html> 

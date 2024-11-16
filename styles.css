@@ -1,0 +1,93 @@
+/* styles.css */
+* {
+    box-sizing: border-box; /* ボックスモデルをボーダーを含むように設定 */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex; /* フレックスボックスを使用 */
+    align-items: center; /* 垂直方向に中央揃え */
+}
+
+.logo img {
+    height: 50px; /* ロゴの高さを調整 */
+}
+
+.company-name {
+    margin-left: 10px; /* ロゴと会社名の間にマージンを追加 */
+    font-size: 24px; /* フォントサイズを設定（必要に応じて調整） */
+    color: #333; /* 会社名の色を設定（必要に応じて調整） */
+}
+
+nav {
+    padding: 5px; /* 内側の余白を小さくする */
+}
+
+nav ul {
+    list-style-type: none; /* リストのスタイルを消す */
+    padding: 0; /* パディングをリセット */
+    margin: 0; /* マージンをリセット */
+    display: flex; /* フレックスボックスを使用 */
+    flex-direction: row; /* 横に並べる */
+    justify-content: space-around; /* 均等に配置 */
+}
+
+nav li {
+    margin: 0; /* 各リストアイテムのマージンをリセット */
+}
+
+nav a {
+    display: block; /* ブロック要素にする */
+    padding: 10px 20px; /* 内側の余白を設定 */
+    font-size: 14px; /* フォントサイズを統一 */
+    line-height: 1.5; /* 行の高さを設定して縦幅を揃える */
+    color: rgb(55, 35, 102); /* テキストの色を設定 */
+    text-decoration: none; /* 下線を消す */
+    transition: background-color 0.3s; /* ホバー時のトランジションを設定 */
+}
+
+nav a:hover {
+    background-color: rgba(68, 65, 65, 0.616); /* ホバー時の背景色を設定 */
+}
+
+
+
+footer {
+    background-color: #554f4f; /* 背景色を変更 */
+    text-align: center; /* テキストを中央揃え */
+    padding: 20px; /* 内側の余白を追加 */
+    margin-top: 20px; /* 上部のマージンを追加 */
+    border-top: 1px solid #ccc; /* 上部に境界線を追加（必要に応じて） */
+}
+section {
+    border: 2px solid #d7d1d1; /* 枠の太さと色を設定 */
+    border-radius: 5px; /* 角を丸くする（必要に応じて） */
+    padding: 20px; /* 内側の余白を追加 */
+    margin: 20px 0; /* 上下のマージンを追加 */
+    background-color: #f9f9f9; /* 背景色を設定（必要に応じて） */
+}
+
+
+
+/* 特定の要素に異なるフォントを適用する場合 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans JP', sans-serif; /* 見出しに同じフォントを設定 */
+}
+
+
+

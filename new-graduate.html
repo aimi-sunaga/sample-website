@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新卒採用詳細</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="design/recruit.css">
+    <link rel="stylesheet" href="design/new-graduate.css">
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <main>
+        <h2>新卒採用情報</h2>
+
+        <table>
+            <tr>
+                <th>項目</th>
+                <th>詳細</th>
+            </tr>
+            <tr>
+                <td>募集要項</td>
+                <td><strong>企画営業職</strong><br>
+                    <strong>概要</strong>：クライアントが抱える課題をヒアリングし、課題解決のための○○○○○○
+                </td>
+            </tr>
+            <tr>
+                <td>応募資格</td>
+                <td>202〇年3月に大学・大学院を卒業・終了予定の方</td>
+            </tr>
+            <tr>
+                <td>選考フロー</td>
+                <td>エントリ→書類選考→面接(2回)→内々定<br>
+                    ※エントリーから内々定まで最短一か月
+                </td>
+            </tr>
+            <tr>
+                <td>勤務地</td>
+                <td>本社オフィス（東京都○○○○）</td>
+            </tr>
+            <tr>
+                <td>勤務時間</td>
+                <td>10時から19時（休憩時間1時間、実働8時間）<br>
+                    平均残業時間20ｈ/月　※フレックスタイム制導入あり
+                </td>
+            </tr>
+            <tr>
+                <td>給与</td>
+                <td>本社オフィス：月給200,000円<br>
+                    -基本給　本社オフィス○○円<br>
+                    -固定残業手当40,000円（20時間）<br>
+                    -通勤手当別途支給<br>
+                    -賞与2回（6月、12月）、昇給年1回
+                </td>
+            </tr>
+            <tr>
+                <td>福利厚生</td>
+                <td>・社会保険完備<br>
+                    ・通勤手当<br>
+                    ・家賃手当<br>
+                    ・社員旅行
+                </td>
+            </tr>
+            <tr>
+                <td>休日・休暇</td>
+                <td>・完全週休2日制（土・日・祝）<br>
+                    ・有給休暇<br>
+                    ・産休/育休
+                </td>
+            </tr>
+            <tr>
+                <td>使用期間</td>
+                <td>試用期間あり（3カ月）<br>
+                    ※労働条件の変更はありません。
+                </td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        <p>所在地: 東京都〇〇区〇〇町1-2-3</p>
+        <p>TEL: 03-1234-5678</p>
+        <p>受付時間: 9:00 - 17:00</p>
+        <a href="contact.html">お問い合わせフォームはこちら</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>会社のホームページ</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="design/main.css">
+        <link rel="stylesheet" href="design/about.css">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+        <script type="module" src="app.js"></script>
+</head>
+</body>
+<div id="header"></div>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+</script>
+
+    
+
+    <main>
+        <h2>ABOUT US</h2>
+
+        <section id="company-establishment">
+            <h3>会社の設立</h3>
+            <div class="image-container">
+                <div class="centered-image">
+                    <img src="images/intervew.jpg" alt="インタビュー" class="small-image">
+                </div>
+            </div>
+            <div class="text-container">
+                <p>私たちの会社は、20XX年に創業者〇〇によって設立されました。〇〇は、長年の業界経験を通じて「◯◯を解決するためのより良い方法」を見つけることを使命として、当社をスタートさせました。設立から数年で、私たちは多くの企業と共に革新的なプロジェクトを実現し、顧客の課題を解決するために尽力しています。</p>
+            </div>
+        </section>
+
+        <section id="company-vision">
+            <h3>会社の理念</h3>
+            <p>私たちは、顧客満足を最優先に考え、常に品質の向上に努めています。</p>
+        </section>
+
+        <section id="company-history">
+            <h3>会社の歴史</h3>
+            <p>私たちの会社は、20XX年に設立され、以来多くのプロジェクトを成功させてきました。</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>所在地: 東京都〇〇区〇〇町1-2-3</p>
+        <p>TEL: 03-1234-5678</p>
+        <p>受付時間: 9:00 - 17:00</p>
+        <a href="contact.html">お問い合わせフォームはこちら</a>
+    </footer>
+</body>
+</html> 

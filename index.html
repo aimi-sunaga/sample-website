@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社のホームページ</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="design/main.css">
+    <link rel="stylesheet" href="design/news.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="app.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <main>
+        <section id="company-image">
+            <a href="service.html">
+                <div class="image-container">
+                    <img src="images/company-image.jpg" alt="会社の雰囲気" class="full-width-image">
+                    <div class="overlay">
+                        <p>私たちだからできること</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <section id="business">
+            <h2>SERVICE</h2>
+            <div class="business-tabs">
+                <div class="tab">
+                    <a href="service.html?business=ai">
+                        <div class="image-container">
+                            <img src="images/ai-business.jpg" alt="AI事業">
+                            <div class="overlay">
+                                <p>AI事業</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="tab">
+                    <a href="service.html?business=other">
+                        <div class="image-container">
+                            <img src="images/other-business.jpg" alt="○○事業">
+                            <div class="overlay">
+                                <p>○○事業</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="news">
+            <div>
+                <h2>最新のNEWS</h2>
+                <div class="news-header">
+                    <a href="news.html#news-list" class="news-list">NEWS一覧</a>
+                </div>
+            </div>
+            <ul id="news-summary-list">
+                <!-- JavaScriptで日付を追加 -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>所在地: 東京都〇〇区〇〇町1-2-3</p>
+        <p>TEL: 03-1234-5678</p>
+        <p>受付時間: 9:00 - 17:00</p>
+        <a href="contact.html">お問い合わせフォームはこちら</a>
+    </footer>
+
+    <!-- お問い合わせモーダルウィンドウ -->
+    <div id="contact-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>お問い合わせ</h2>
+            <form id="contact-form">
+                <label for="name">お名前:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">メールアドレス:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="message">メッセージ:</label>
+                <textarea id="message" name="message" required></textarea>
+                <br>
+                <button type="submit">��信</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 確認画面 -->
+    <div id="confirmation-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <h2>確認画面</h2>
+            <p id="confirmation-message"></p>
+            <button id="confirm-button">確認</button>
+        </div>
+    </div>
+
+    <script src="news.js" defer></script> <!-- news.jsを読み込む -->
+</body>
+</html>

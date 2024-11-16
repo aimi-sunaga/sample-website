@@ -1,0 +1,92 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* 初期状態は透明 */
+    }
+    to {
+        opacity: 1; /* 最終状態は不透明 */
+    }
+}
+
+/* service.html専用のスタイル */
+.service-section .service-image {
+    width: 100%; /* 幅を100%に設定 */
+    height: auto; /* 高さを自動調整 */
+}
+
+.service-section .image-container {
+    position: relative; /* 画像コンテナを相対位置に設定 */
+}
+
+
+.service-section {
+    display: flex; /* フレックスボックスを使用 */
+    flex-direction: column; /* 縦に並べる */
+    align-items: center; /* 水平方向に中央揃え */
+    text-align: center; /* テキストを中央揃え */
+}
+
+.image-container {
+    display: flex; /* フレックスボックスを使用 */
+    justify-content: center; /* 水平方向に中央揃え */
+    align-items: center; /* 垂直方向に中央揃え */
+    width: 100%; /* 幅を100%に設定 */
+}
+
+
+/* 左上のオーバーレイに表示するテキスト */
+.service-section .top-left-text {
+    position: absolute; /* 絶対位置を設定 */
+    top: 15%; /* 上からの位置を調整（少し上げる） */
+    left: 30px; /* 左からの位置を調整（少し右にずらす） */
+    color: rgb(46, 42, 42); /* テキストの色を白に設定 */
+    font-size: 5vw; /* ビューポート幅に基づいてフォントサイズを設定 */
+    z-index: 2; /* テキストをオーバーレイの上に表示 */
+}
+
+
+
+/* 右下のグレースケールの直角三角形 */
+.service-section .bottom-right-overlay {
+    position: absolute; /* 絶対位置を設定 */
+    bottom: 0; /* 下端に配置 */
+    right: 0; /* 右端に配置 */
+    width: 100%; /* 幅を100%に設定 */
+    height: 100%; /* 高さを100%に設定 */
+    background-color: rgba(95, 89, 89, 0.5); /* グレースケールの背景色を設定 */
+    clip-path: polygon(100% 100%, 100% 0, 0 100%); /* 右下の直角三角形を作成 */
+    z-index: 1; /* 前面に表示 */
+    display: flex; /* フレックスボックスを使用 */
+    justify-content: flex-end; /* 右揃 */
+    align-items: flex-end; /* 下揃え */
+    padding: 10px; /* 内側の余白を追加 */
+    animation: fadeIn 1s ease-in; /* フェードインアニメーションを適用 */
+}
+
+/* ボックスのスタイル */
+.service-section .text-box {
+    display: flex; /* フレックスボックスを使用 */
+    flex-direction: column; /* 縦に並べる */
+    justify-content: space-between; /* 均等に配置 */
+    background-color: rgba(255, 255, 255, 0); /* 無色透明 */
+    padding: 10px; /* 内側の余白を追加 */
+    border: 1px solid transparent; /* ボーダーを透明に設定（必要に応じて調整） */
+    max-width: 50%; /* ボックスの最大幅を設定（必要に応じて調整） */
+}
+
+/* 右下のテキスト */
+.service-section .bottom-right-text {
+    color: white; /* テキストの色を白に設定 */
+    font-size: 2.5vw; /* ビューポート幅に基づいてフォントサイズを小さく設定 */
+    z-index: 2; /* テキストをオーバーレイの上に表示 */
+    margin: 0; /* マージンをリセット */
+    text-align: left; /* テキストを左揃え */
+    animation: fadeIn 1s ease-in; /* フェードインアニメーションを適用 */
+}
+
+.hidden {
+    opacity: 0; /* 初期状態は透明 */
+    transition: opacity 1s ease-in; /* フェードインのトランジション */
+    visibility: hidden; /* 要素を非表示にする */
+}
+
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>採用情報</title>
+    <link rel="stylesheet" href="design/recurit.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+
+    <!-- メインコンテンツセクション -->
+    <main>
+        <h2>採用情報</h2>
+
+        <!-- 社員を知るセクション -->
+        
+        <section>
+            <h3>社員を知る</h3>
+            <div class="outer-container">
+                <button class="arrow left-arrow">&#9664;</button>
+                <div class="employee-container">
+                    <div class="image-container">
+                        <img src="images/employeeA.jpg" alt="Aさん" class="interview-image" data-popup="interviewA">
+                        <img src="images/employeeB.jpg" alt="Bさん" class="interview-image" data-popup="interviewB">
+                        <img src="images/employeeC.jpg" alt="Cさん" class="interview-image" data-popup="interviewC">
+                        <img src="images/employeeD.jpg" alt="Dさん" class="interview-image" data-popup="interviewD">
+                        <img src="images/employeeE.jpg" alt="Eさん" class="interview-image" data-popup="interviewE">
+                        <img src="images/employeeF.jpg" alt="Fさん" class="interview-image" data-popup="interviewF">
+                    </div>
+                </div>
+                <button class="arrow right-arrow">&#9654;</button>
+            </div>
+        </section>
+
+        <!-- ポップアップ -->
+        <div id="interviewA" class="popup">
+            <div class="popup-content">
+                <div class="image-container">
+                    <img id="popup-image" class="popup-image" src="" alt="ポップアップ画像">
+                </div>
+                <div class="text-container">
+                    <h4>社員インタビュー：山田太郎（営業部）</h4>
+                    <p><strong>Q1:</strong> 現在の仕事について教えてください。</p>
+                    <p>私は営業部で、主に新規顧客の開拓と既��顧客との関係構築を担当しています。日々、お客様のニーズを引き出し、それに合わせた提案を行うことが中心です。お客様との信頼関係を築くことにやりがいを感じており、どんなに小さな課題でも解決できるように尽力しています。</p>
+
+                    <p><strong>Q2:</strong> 入社のきっかけと、現在の仕事に対する思いを教えてください。</p>
+                    <p>大学ではマーケティングを学び、その延長で営業職に興味を持つようになりました。私は人と接することが好きで、お客様の課題を解決することに魅力を感じていました。実際に当社で働くようになり、チームの一員として、お客様と共に成長できることに大きな充実感を感じています。営業職は常に新しい挑戦があり、日々成長を実感できる職場です。</p>
+
+                    <p><strong>Q3:</strong> 会社の雰囲気や文化について教えてください。</p>
+                    <p>当社はフラットな組織で、上司や同僚との距離が近いため、意見交換が非常に活発です。困ったときには気軽に相談でき、助け合う文化が根付いています。また、チャレンジを歓迎する風土があり、新しいアイデアや提案にも積極的に耳を傾けてくれるので、自分の成長に繋がる環境と感じています。</p>
+
+                    <p><strong>Q4:</strong> これからどのような目標を持って仕事をしていきたいですか？</p>
+                    <p>今後は、より多くのお客様に当社の価値を伝え、信頼を得ることで、営業成績をさらに伸ばしていきたいです。また、若手社員の指導にも力を入れ、チーム全体の成長をサポートできるような存在になりたいと思っています。</p>
+
+                    <span class="close-popup" onclick="closePopup('interviewA')">閉じる</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="interviewB" class="popup">
+            <div class="popup-content">
+                <h4>Bさんのインタビュー内容</h4>
+                <p>ここにBさんのインタビュー内容が入ります。</p>
+                <span class="close-popup" onclick="closePopup('interviewB')">閉じる</span>
+            </div>
+        </div>
+
+        <div id="interviewC" class="popup">
+            <div class="popup-content">
+                <h4>Cさんのインタビュー内容</h4>
+                <p>ここにCさんのインタビュ��内容が入ります。</p>
+                <span class="close-popup" onclick="closePopup('interviewC')">閉じる</span>
+            </div>
+        </div>
+
+        <div id="interviewD" class="popup">
+            <div class="popup-content">
+                <h4>Dさんのインタビュー内容</h4>
+                <p>ここにDさんのインタビュー内容が入ります。</p>
+                <span class="close-popup" onclick="closePopup('interviewD')">閉じる</span>
+            </div>
+        </div>
+
+        <div id="interviewE" class="popup">
+            <div class="popup-content">
+                <h4>Eさんインタビュー内容</h4>
+                <p>ここにEさんのインタビュー内容が入ります。</p>
+                <span class="close-popup" onclick="closePopup('interviewE')">閉じる</span>
+            </div>
+        </div>
+
+        <div id="interviewF" class="popup">
+            <div class="popup-content">
+                <h4>Fさんのインタビュー内容</h4>
+                <p>ここにFさんのインタビュー内容が入ります</p>
+                <span class="close-popup" onclick="closePopup('interviewF')">閉じる</span>
+            </div>
+        </div>
+
+        <!-- 新卒採用とキャリア採用セクション -->
+        <section>
+            <h3>新卒採用とキャリア採用</h3>
+            <div class="recruitment-options">
+                <div class="recruitment-option">
+                    <img src="assets/images/new-graduate.jpg" alt="新卒採用">
+                    <a href="new-graduate.html">新卒採用詳細</a>
+                </div>
+                <div class="recruitment-option">
+                    <img src="assets/images/career.jpg" alt="キャリア採用">
+                    <a href="career.html">キャリア採用詳細</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッターセクション -->
+    <footer>
+        <p>所在地: 東京都〇町1-2-3</p>
+        <p>TEL: 03-1234-5678</p>
+        <p>受付時間: 9:00 - 17:00</p>
+        <a href="contact.html">お問い合わせフォームはこちら</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

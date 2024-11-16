@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVICE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="design/service.css">
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <main>
+        <h2>service</h2>
+
+        <section class="service-section">
+            <div class="image-container">
+                <img src="images/ai-business.jpg" alt="AI事業" class="service-image full-width-image">
+                <div class="top-left-overlay"></div>
+                <div class="top-left-text">AI事業</div>
+                <div class="text-overlay"></div>
+                <div class="bottom-right-overlay">
+                    <div class="text-box">
+                        <div class="bottom-right-text">
+                            私たちのAI事業は、最新の技術を駆使して、企業の業務効率を向上させるソリューションを提供します。データ分析や機械学習を活用し、ビジネスの成長をサポートします。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section">
+            <div class="image-container">
+                <img src="images/other-business.jpg" alt="○○事業" class="service-image full-width-image">
+                <div class="top-left-overlay"></div>
+                <div class="top-left-text">○○事業</div>
+                <div class="text-overlay"></div>
+                <div class="bottom-right-overlay">
+                    <div class="text-box">
+                        <div class="bottom-right-text">
+                            私たちの○○事業は、顧客のニーズに応じたカスタマイズされたサービスを提供します。データ分析や機械学習を活用し、最適なソリューションを提案します。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>所在地: 東京都〇〇区〇〇町1-2-3</p>
+        <p>TEL: 03-1234-5678</p>
+        <p>受付時間: 9:00 - 17:00</p>
+        <a href="contact.html">お問い合わせフォームはこちら</a>
+    </footer>
+</body>
+</html> 
